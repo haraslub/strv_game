@@ -1,0 +1,23 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.4.2
+  - smartcontractkit/chainlink@1.1.0
+compiler:
+  solc:
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.4.2"
+      - "@chainlink=smartcontractkit/chainlink@1.1.0"
+dotenv: .env
+wallets:
+  from_key: ${PRIVATE_KEY}
+  from_key_user: ${PRIVATE_KEY_USER}
+networks:
+  development:
+    keyhash: "0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311"
+    fee: 100000000000000000
+  rinkeby:
+    vrf_coordinator: "0xb3dCcb4Cf7a26f6cf6B120Cf5A73875B7BBc655B"
+    link_token: "0x01BE23585060835E02B77ef475b0Cc51aA1e0709"
+    keyhash: "0x2ed0feb3e7fd2022120aa84fab1945545a9f2ffc9076fd6156fa96eaff4c1311"
+    fee: 100000000000000000
+    verify: True
+    deployed_nft_game: "0xE28e0f6A1bC70D54F224284751dD733334dd85Ae"
